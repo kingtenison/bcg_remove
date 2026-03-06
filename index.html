@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Image Background Remover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Free Image Background Remover</h1>
+        <p class="subtitle">Using Remove.bg API (50 free images/month)</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <label for="imageUpload" class="upload-label">
+                <div class="upload-content">
+                    <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                    <p>Click to upload an image</p>
+                    <p class="file-requirements">(JPG, PNG, max 5MB)</p>
+                </div>
+            </label>
+        </div>
+        
+        <div class="image-preview" id="imagePreview">
+            <img id="previewImage" src="" alt="Preview" class="hidden">
+        </div>
+        
+        <div class="action-buttons hidden" id="actionButtons">
+            <button id="removeBgBtn" class="btn remove-bg-btn">Remove Background</button>
+            <button id="downloadBtn" class="btn download-btn" disabled>Download Image</button>
+        </div>
+        
+        <div class="loading hidden" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Processing image...</p>
+        </div>
+        
+        <div class="api-info">
+            <p>Powered by <a href="https://www.remove.bg/api" target="_blank">Remove.bg API</a></p>
+            <p class="api-limit">Free limit: 50 images per month</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
